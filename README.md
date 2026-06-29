@@ -1,4 +1,4 @@
-# OLA: Ride-Hailing Data Analytics Project
+# OLA: Ride-Hailing Data Analysis
 
 > An end-to-end SQL and Tableau analytics project analyzing ride-hailing operations at OLA — covering booking trends, cancellation patterns, customer behavior, fleet performance, and driver ratings.
 
@@ -8,7 +8,7 @@
 
 OLA is one of India's largest ride-hailing platforms, operating across hundreds of cities and serving millions of customers daily. This project simulates a real-world data analyst role, exploring OLA's ride-hailing records to uncover actionable insights across five core business disciplines: utilization, cancellations, customer behavior, fleet & revenue, and analytics.
 
-The dataset spans **103,024 total bookings** representing **₹56.53M in ride value**, queried using SQL (Google BigQuery) and visualized using Tableau Desktop.
+The dataset spans **103,024 total bookings** representing **₹56.53M in ride value**, queried using SQL (Google BigQuery) and visualized using Tableau.
 
 ---
 
@@ -167,7 +167,7 @@ Five interactive dashboards were built in Tableau to surface the SQL findings vi
 | Cancellations | Stacked Bar | Cancellation rates split by customer vs. driver |
 | Ratings | Mixed Chart | Driver and customer rating distributions |
 
-📎 *[View the interactive Tableau dashboard →](#)* *(update with your Tableau Public link)*
+📎 *[View the interactive Tableau dashboard](https://public.tableau.com/views/OLAProjectDashboard/Overall?:language=en-US&:increment_view_count=no&:embed=y&:sid=&:redirect=auth&:embed_code_version=3&:loadOrderID=0&:display_count=y&:origin=viz_share_link)*
 
 ---
 
@@ -208,30 +208,26 @@ Five interactive dashboards were built in Tableau to surface the SQL findings vi
 ## Repository Structure
 
 ```
-ola-ride-hailing-analytics/
+ola-ride-hailing-analysis-sql-tableau/
 │
 ├── README.md
-├── sql/
-│   ├── 01_successful_bookings.sql
-│   ├── 02_avg_ride_distance_by_vehicle.sql
-│   ├── 03_cancelled_by_customer.sql
-│   ├── 04_top_5_customers.sql
-│   ├── 05_driver_ratings_prime_sedan.sql
-│   └── ... (20 queries total)
+├── queries/
+│   ├── data_import_script_mysql.sql
+│   └── main_script.sql
 │
 ├── dashboard/
-│   └── OLA_Dashboard.twbx       ← Tableau workbook
+│   └── ola_project_dashboard.pdf
 │
 └── data/
-    └── ola_bookings_july2024.csv ← Sample / anonymised dataset
+    └── ola_bookings.csv
 ```
 
 ---
 
 ## How to Run
 
-1. **SQL Queries:** Import the dataset into Google BigQuery and run any `.sql` file from the `/sql` folder. Each query uses `CREATE VIEW` and can be executed independently.
-2. **Tableau Dashboard:** Open `OLA_Dashboard.twbx` in Tableau Desktop (version 2022.1+). Connect to the dataset if prompted.
+1. **SQL Queries:** Import the dataset into Google BigQuery and run any `main_script.sql` file from the `/queries` folder. Each query uses `CREATE VIEW` and can be executed independently. Make sure that your BigQuery project and table names align with the script.
+2. **Tableau Dashboard:** Click the text above (*View the interactive Tableau dashboard*) which is embed with the tableau link.
 3. **Dataset:** The dataset used is a structured, anonymised sample representing July 2024 ride-hailing activity.
 
 ---
@@ -241,9 +237,9 @@ ola-ride-hailing-analytics/
 **Iktedar Ahmed**
 Data Analytics Portfolio | Assam, India
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/your-profile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/iktedarahmed72600)
 [![Portfolio](https://img.shields.io/badge/Portfolio-View-green)](https://sites.google.com/view/iktedar-ahmed/home)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/your-username)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/Analyst-Iktedar)
 
 > *"This project demonstrates how structured SQL analysis combined with interactive visualisation can surface actionable intelligence from large-scale ride-hailing data — supporting smarter decisions around driver management, customer satisfaction, and revenue optimisation."*
 
